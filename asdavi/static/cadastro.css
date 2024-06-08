@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+/* Define as importações de fontes do Google Fonts */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Define o box-sizing como border-box para facilitar o dimensionamento dos elementos e define a fonte Poppins como fonte padrão */
+
+html {
+    font-size: 62.5%;
+}
+/* Define o tamanho da fonte base para facilitar os cálculos de tamanho de fonte rem */
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  
+::-webkit-scrollbar-thumb {
+
+    background-color: #78b089;
+    border-radius: 1rem;
+}
+
+
+::-webkit-scrollbar-track {
+    
+    border-radius: 1rem; 
+}
+
+body {
+    background-color: #36844D;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 5rem; /* Espaçamento na parte superior */
+    padding-bottom: 6rem; /* Adiciona espaçamento entre o conteúdo e o fundo verde */
+}
+/* Estiliza o corpo da página, definindo o fundo verde (#36844D) e alinhando os itens na parte superior. Define uma altura mínima de 100vh para garantir que o corpo ocupe pelo menos toda a altura da tela. Adiciona espaçamento na parte superior e inferior. */
+
+.cadastro {
+    width: 75%; /* 75% da tela */
+    max-width: 75rem; /* Largura máxima */
+    height: auto;
+    background-color: #f7f7f7; /* Fundo branco */
+    border-radius: 2rem;
+    padding: 2rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column; /* Coluna flexível */
+    align-items: center; /* Centraliza na horizontal */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    position: relative; /* Importante para o posicionamento do botão */
+    margin-bottom: 4rem; /* Adiciona espaçamento entre o conteúdo e o fundo verde */
+    z-index: 1; /* Garante que este elemento fique sobreposto ao fundo verde */
+}
+/* Estiliza o contêiner principal onde está o formulário de cadastro. Ele ocupa 75% da largura da tela, tem um fundo branco (#f7f7f7), bordas arredondadas e algum espaçamento interno. O `flex-direction: column` organiza os itens em uma coluna vertical. `justify-content: space-between` distribui o espaço verticalmente entre os itens, deixando espaço extra na parte inferior. `position: relative` permite posicionar elementos filhos relativos a este contêiner. `z-index: 1` garante que este contêiner fique sobreposto ao fundo verde. */
+
+.logo {
+    width: 82px;
+    height: 96px;
+    margin-top: -19px;
+    margin-bottom: 20px;
+}
+/* Estiliza a imagem do logo, definindo sua largura, altura e margens superior e inferior. */
+
+.cadastro h2 {
+    color: #36844D;
+    font-weight: 600;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem; /* Adicionado espaço abaixo do título */
+    margin-top: -3rem; /* Adicionado espaço acima do título */
+}
+/* Estiliza o título "Cadastro de Estudante", definindo cor, peso da fonte, tamanho da fonte, transformação para maiúsculas e margens superiores e inferiores. */
+
+.image-container {
+    margin-top: 1.5rem; /* Espaço para a imagem */
+    width: 87px; /* Largura da imagem */
+    height: 76px; /* Altura da imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 50%;
+}
+/* Estiliza um contêiner para a imagem. Define margem superior, largura, altura, cor de fundo branca, borda arredondada e alinha a imagem no centro. */
+
+.image-container img {
+    width: 80%; /* Largura da imagem ajustada */
+    height: auto; /* Altura ajustada automaticamente */
+    border-radius: 50%;
+}
+/* Estiliza a imagem dentro do contêiner, ajustando sua largura para 80% do contêiner, mantendo a altura proporcional e aplicando uma borda arredondada. */
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Estiliza o formulário, definindo sua largura como 100% da largura do contêiner pai e alinhando os itens no centro vertical e horizontalmente. */
+
+h4,
+h6 {
+    color: #36844D;
+    font-weight: 500; /* Mudança de font-weight */
+    font-size: 2.2rem; /* Mudança de tamanho */
+    text-transform: uppercase; /* Transforma em maiúsculas */
+    letter-spacing: 0.05em; /* Espaçamento entre as letras */
+    margin-bottom: 0rem;
+    margin-top: 5rem; /* Espaçamento abaixo dos títulos */
+}
+/* Estiliza os títulos h4 e h6, definindo cor, peso da fonte, tamanho da fonte, transformação para maiúsculas, espaçamento entre as letras e margem inferior. */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+/* Estiliza o grupo de entrada de dados, organizando-o em uma coluna vertical e definindo sua largura como 100%. */
+
+.input-group label {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+}
+/* Define o tamanho da fonte para as etiquetas dos grupos de entrada de dados. */
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 1rem 0.8rem;
+    outline: none;
+    background-color: #36844d00;
+    border: 2px solid #36844D;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    color: #646765;
+}
+/* Estiliza as entradas de dados e selects, definindo sua largura como 100%, preenchimento interno, cor de fundo, borda e borda arredondada, tamanho da fonte e cor do texto. */
+
+input::placeholder {
+    font-size: 1.5rem;
+}
+/* Define o tamanho da fonte para o espaço reservado dentro das entradas de dados. */
+
+.input-group select::-ms-expand {
+    display: none;
+}
+/* Esconde a seta de seleção para navegadores da Microsoft. */
+
+.input-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2336844D"><path d="M7 10l5 5 5-5z" /></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 1.2rem;
+    padding-right: 2rem; /* Espaço para a seta */
+}
+/* Estiliza a seta de seleção nos selects, adicionando uma imagem SVG como fundo, ajustando a posição e o tamanho, e adicionando espaço para a seta. */
+
+button {
+    background-color: #36844D;
+    width: 100%;
+    max-width: 25rem;
+    padding: 0.9rem 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 0.7rem;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Estiliza os botões, definindo a cor de fundo, largura, largura máxima, preenchimento, cursor, borda, borda arredondada, cor do texto, tamanho da fonte e peso da fonte. Adiciona margens superior e inferior automáticas e margens laterais automáticas para centralizá-los horizontalmente. */
+
+button:hover {
+    opacity: 0.9;
+}
+/* Estiliza os botões em hover, ajustando a opacidade. */
+
+.as, .da, .vi {
+    color: red;
+}
+/* Estiliza as partes "AS" e "VI" em vermelho. */
+
+.da {
+    color: yellow;
+}
+/* Estiliza a parte "DA" em amarelo. */
+
+.associacao {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: -81px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    color: white;
+    z-index: 0; /* Garante que este elemento fique atrás do fundo branco */
+}
+/* Estiliza o texto "Associação Dançar Á Vida" no rodapé do formulário, centralizando-o horizontalmente, preenchimento e cor do texto. */
+
+.voltar {
+    margin-top: 1rem; /* Espaçamento acima do texto "VOLTAR" */
+    text-align: center; /* Centraliza o texto */
+    font-size: 50%;
+}
+
+.voltar span {
+    text-decoration: underline; /* Sublinha o texto */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    color: #36844D; /* Cor do texto */
+    font-size: 12px;
+}
+
+.voltar span:hover {
+    color: #1E5631; /* Cor do texto ao passar o mouse */
+}
+
+.voltar a {
+    text-decoration: underline;
+    color: #36844D;
+}
+
+.voltar a:hover {
+    color: #1E5631;
+}

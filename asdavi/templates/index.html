@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Associação Dançar à Vida</title>
+  </head>
+  <body>
+   
+    <header>
+      <div class="text">
+        <h3>AS<span>DA</span>VI</h3>
+        <p>Associação Dançar à Vida</p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#section1">Sobre</a></li>
+          <li><a href="#section2">Localização</a></li>
+          <li><a href="#section3">Serviços</a></li>
+          <li><a href="#section4">Responsável</a></li>
+          <li><a href="#footer">Contato</a></li>
+          <li><a href="{% url 'pagamento' %}">Doação</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section id="section1" class="section1">
+      <div class="quemSomos">
+        <div class="texts">
+          <h2 class="titles">Quem somos</h2>
+          <div class="p">
+            <p>
+              A Associação Dançar à Vida (ASDAVI) é um projeto social que teve
+              início em 20 de maio de 2005, fundada pela Paróquia Senhora
+              Santana de Ipirá-BA, com o objetivo de desenvolver projetos de
+              inclusão de crianças e adolescentes em situação de
+              vulnerabilidade.
+            </p>
+            <p>
+              Atualmente, nossa associação conta com quatro educadores que
+              desenvolvem um trabalho com ações pedagógicas, música, dança,
+              reforço escolar, artesanato, esportes, curso de computação, teatro
+              e outras atividades.
+            </p>
+          </div>
+        </div>
+        <div class="imagem1">
+          <img src="{% static 'img/imagem1.jpg' %}" alt="" />
+        </div>
+      </div>
+
+      <div class="objetivos">
+        <div class="imagem1">
+        <img src="{% static "img/imagem2.jpg" %}" alt="" />
+        </div>
+        <div class="texts">
+          <h2 class="titles">Nossos objetivos</h2>
+          <ul>
+            <li>
+              Integrar crianças e adolescentes em risco na sociedade, família e
+              escola/comunidade.
+            </li>
+            <li>Promover a cidadania e sua vivência.</li>
+            <li>
+              Utilizar o diálogo pedagógico para desenvolver habilidades de
+              escuta, atenção e responsabilidade.
+            </li>
+            <li>
+              Fomentar o cuidado e a preservação do espaço como segunda casa
+              desses jovens.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="section2" class="section2">
+      <div class="localização-top">
+        <h2>Onde nos localizamos</h2>
+        <div class="local">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d883.563476208984!2d-39.740467771585834!3d-12.189494099250545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x714d9825f33129f%3A0x776dd8a008419916!2sIpirazinho!5e1!3m2!1spt-BR!2sbr!4v1695517975960!5m2!1spt-BR!2sbr"
+            width="750"
+            height="450"
+            style="border: 4px solid #ffffff"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <p>AV Adelino da Silva Lima s/n povoado Ipirazinho - Ipirá, BA</p>
+      </div>
+    </section>
+
+    <section id="section3" class="section3">
+      <div class="textSection3">
+        <h2 class="titles">O que fazemos</h2>
+        <p>
+          Na tentativa de envolver e aproximar as crianças e adolescentes da
+          região, utilizamos de atrativos que tragam ao mesmo tempo lazer e
+          educação, assim mostrando para eles a importância da cultura na nossa
+          sociedade. Realizamos portanto: <span>aulas de música, canto, dança, prática de esportes e outras atividades.</span>
+        </p>
+      </div>
+      <div class="content">
+        <div class="slides">
+          <input type="radio" name="radio" id="slide1" checked />
+          <input type="radio" name="radio" id="slide2" />
+          <input type="radio" name="radio" id="slide3" />
+          <input type="radio" name="radio" id="slide4" />
+          <input type="radio" name="radio" id="slide5" />
+          <input type="radio" name="radio" id="slide6" />
+          <input type="radio" name="radio" id="slide7" />
+          <input type="radio" name="radio" id="slide8" />
+
+          <div class="slide s1">
+            <img class="scolor" src="{% static "img/slide11.png" %}" alt="#" />
+          </div>
+
+          <div class="slide s2">
+            <img class="scolor" src="{% static "img/slide2.png" %}" alt="#" />
+          </div>
+
+          <div class="slide s3">
+              <img class="scolor" src="{% static "img/slide3.png" %}" alt="#" />
+          </div>
+
+          <div class="slide s4">
+            <img class="scolor" src="{% static "img/sllide5.png" %}" alt="#" />
+          </div>
+
+          <div class="slide s5">
+            <img class="scolor" src="{% static "img/slide5.png" %}" alt="" />
+          </div>
+
+          <div class="slide s6">
+            <img class="scolor" src="{% static "img/slide4.png" %}" alt="" />
+          </div>
+
+          <div class="slide s7">
+            <img class="scolor" src="{% static "img/slide6.png" %}" alt="" />
+          </div>
+
+          <div class="slide s8">
+            <img class="scolor" src="{% static "img/slide8.png" %}" alt="" />
+          </div>
+
+          <div class="navigation">
+            <label class="bar" for="slide1"></label>
+            <label class="bar" for="slide2"></label>
+            <label class="bar" for="slide3"></label>
+            <label class="bar" for="slide4"></label>
+            <label class="bar" for="slide5"></label>
+            <label class="bar" for="slide6"></label>
+            <label class="bar" for="slide7"></label>
+            <label class="bar" for="slide8"></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section4" class="section4">
+      <h2>Responsável</h2>
+      <div class="img">
+        <img
+          src="{% static "img/WhatsApp Image 2023-09-25 at 19.59.35 (1).jpeg" %}"
+          alt=""
+        />
+        <p>Padre Joeval Oliveira Rios</p>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="logo">
+        
+          <img src="{% static "img/logo.png" %}" alt="logo">
+        
+        <div class="textLogo">
+          <h3>AS<span>DA</span>VI</h3>
+          <p>Associação Dançar à Vida</p>
+        </div>
+      </div>
+      <div class="contato">
+        <h3>Contato</h3>
+        <div class="email info">
+          <p><i class="ph ph-envelope-simple"></i>dancaravidaipira@gmail.com</p>
+        </div>
+        <div class="insta info">
+          <p><i class="ph ph-instagram-logo"></i><a href="https://www.instagram.com/projeto_dancar_a_vida/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank">@projeto_dancar_a_vida</a></p>
+        </div>
+        <div class="number info">
+          <p><i class="ph ph-phone"></i>(75) 3254226</p>
+        </div>
+        <div class="whats info">
+          <p><i class="ph ph-whatsapp-logo"></i>(75) 991660147</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+      
+    
+  </body>
+</html>

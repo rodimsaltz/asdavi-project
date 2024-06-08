@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'editar.css' %}" />
+    <title>Editar Aluno</title>
+</head>
+<body>
+    <div class="cadastro">
+      <img src="{% static "img/logo.png" %}" alt="Logo" class="logo">
+        <h2>Editar Ficha do Estudante</h2>
+        <form method="POST" action="{% url 'editar' aluno.pk %}">
+           {% csrf_token %}
+           <section>
+            <h4>Informações Pessoais</h4>
+            <div class="input-group">
+              <label for="nome_aluno">Nome Completo:</label><br>
+              <input type="text" id="nome_aluno" name="nome_aluno" required>
+            </div>
+            <div class="input-group">
+              <label for="data_nascimento">Data de Nascimento:</label><br>
+              <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
+            <div class="input-group">
+              <label for="genero_aluno">Gênero:</label><br>
+              <input type="text" id="genero_aluno" name="genero_aluno" required>
+            </div>
+            <div class="input-group">
+              <label for="documento_aluno">Documento de Identificação:</label><br>
+              <input type="text" id="documento_aluno" name="documento_aluno" required>
+            </div>
+            <div class="input-group">
+              <label for="endereco_aluno">Endereço Completo:</label><br>
+              <input type="text" id="endereco_aluno" name="endereco_aluno" required>
+            </div>
+            <div class="input-group">
+              <label for="telefone_aluno">Número de Telefone:</label><br>
+              <input type="tel" id="telefone_aluno" name="telefone_aluno" required>
+            </div>
+           </section>
+
+           <section>
+            <h4>Informações de Saúde</h4>
+            <div class="input-group">
+              <label for="nome_enfermidade">Alergias(Se houver):</label><br>
+              <input type="text" id="nome_enfermidade" name="nome_enfermidade">
+            </div>
+            <div class="input-group">
+              <label for="nome_medicamento">Usa Algum Medicamento?(Se sim, informe qual):</label><br>
+              <input type="text" id="nome_medicamento" name="nome_medicamento">
+            </div>
+            <div class="input-group">
+              <label for="telefone_emergencia">Contato para Emergência:</label><br>
+              <input type="tel" id="telefone_emergencia" name="telefone_emergencia" required>
+            </div> 
+           </section>
+
+            <section> 
+                <h4>Situação Familiar</h4>
+                <div class="input-group">
+                  <label for="renda_familiar">Renda Familiar:</label><br>
+                  <input type="text" id="renda_familiar" name="renda_familiar" required>
+                </div>
+                <div class="input-group">
+                  <label for="condicoes_familiar">Condições de Moradia:</label><br>
+                  <input type="text" id="condicoes_familiar" name="condicoes_familiar" required>
+                </div>
+            </section>
+
+            <section>
+                <h4>Informações Educacionais</h4>
+                <div class="input-group">
+                    <label for="nivel_escolaridade">Nível de Escolaridade:</label><br>
+                    <input type="text" id="nivel_escolaridade" name="nivel_escolaridade" required>
+                  </div>
+                  <div class="input-group">
+                    <label for="interesse_educacional">Interesses Educacionais:</label><br>
+                    <input type="text" id="interesse_educacional" name="interesse_educacional" required>
+                  </div>
+                  <div class="input-group">
+                  <label for="necessidade_especial">Necessidades Educacionais Especiais(Se conhecidas):</label><br>
+                  <input type="text" id="necessidade_especial" name="necessidade_especial" required>
+                </div>
+            </section>
+
+            <section>
+             <h4>Autorização e Consentimento</h4>
+             <div class="input-group">
+              <label for="autorizacao">Consentimento para uso de imagem em atividades da ONG (fotos, vídeos, etc.):</label><br>
+              <select id="autorizacao" name="autorizacao" required>
+                  <option value="" disabled selected hidden>Selecione uma opção</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+              </select>
+            </section>
+
+            <button type="submit">SALVAR ALTERAÇÕES</button>
+            <div class="associacao">
+              <span class="as">AS</span><span class="da">DA</span><span class="vi">VI</span><br>
+              Associação Dançar Á Vida
+            </div>
+            <div class="voltar">
+              <span><a href="index.html">INICIO</a></span>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

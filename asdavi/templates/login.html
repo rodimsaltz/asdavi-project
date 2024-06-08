@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="#">
+            <div class="back">
+                <a href="./index.html"><i class="ph ph-arrow-fat-left"></i></a>
+            </div>
+            <h2>Login do Adminstrador</h2>
+            <div class="inputs">
+                <div class="input">
+                  <label for="email">Email de Usuário</label>
+                  <input type="email" id="email" name="username" placeholder="Digite o seu email" required>
+                </div>
+                <div class="input">
+                  <label for="password">Senha </label>
+                  <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                </div>
+              
+          </div>
+          <button type="submit" onclick="logar(); return false">ENTRAR</button>
+        </form>
+
+    </div>
+</body>
+  <script src="./assets/js/login.js"></script>
+</html>

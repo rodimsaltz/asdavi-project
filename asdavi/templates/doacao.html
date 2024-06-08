@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'doacao.css' %}" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Tela de doação</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="back">
+                <a href="./index.html"><i class="ph ph-arrow-fat-left"></i></a>
+            </div>
+            <div class="titulo">
+                <h2>Faça a sua doação</h2>
+            </div>
+            <div class="inputs">
+                <div class="input">
+                    <label for="name">Nome do doador ou instituição</label>
+                    <input id="name" type="text" placeholder="Digite seu nome" maxlength="200">
+                </div>
+                <div class="input">
+                    <label for="email">E-mail para contato</label>
+                    <input type="email" id="email" placeholder="Digite um email" maxlength="256">
+                </div>
+            </div>
+           
+            <button type="submit" onclick="logar(); return false"><a href="{% url 'pagamento' %}" class="button-link">Doar</a></button>
+            
+            <div class="outros">
+                <p>Para outras doações, entre em contato conosco: </p>
+                <p>email: dancaravidaipira@gmail.com</p> 
+                <p>Telefone: (75) 3254226 ou (75) 991660147</p>
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>
