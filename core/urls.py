@@ -16,19 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from asdavi.views import IndexTemplateView, PagamentoTemplateView, DoacaoTemplateView, LoginTemplateView, CadastroCreateView, PesquisaAlunoView, EditarAlunoView,AdminTemplateView
+from asdavi.views import IndexTemplateView, PagamentoTemplateView, DoacaoTemplateView, CadastroCreateView, PesquisaAlunoView, EditarAlunoView,AdminTemplateView, generate_student_pdf
 from asdavi import views
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexTemplateView.as_view(), name="index" ),
     path('pagamento/', PagamentoTemplateView.as_view(), name="pagamento" ),
     path('doacao/', DoacaoTemplateView.as_view(), name ="doacao"),
-    path('login/', LoginTemplateView.as_view(), name="login"),
+    path('login/', views.login, name="login"),
     path('cadastro/', CadastroCreateView.as_view(), name="cadastro"),
     path('listaralunos/', PesquisaAlunoView.as_view(), name="alunos"),
     path('editar/<int:pk>', EditarAlunoView.as_view(), name = "editar"),
     path('excluir/<int:pk>', views.Excluir_Aluno, name = "excluir"),
-    path('administrador/', AdminTemplateView.as_view(), name="admin"),
+    path('administrador/', AdminTemplateView.as_view(), name="administrador"),
+    path('generate-pdf/<int:aluno_id>/', generate_student_pdf, name='generate_student_pdf'),
 ]
+

@@ -1,0 +1,36 @@
+<!-- student_pdf_template.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dados do Aluno</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 100%; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .content { margin: 20px; }
+        .content p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dados do Aluno</h1>
+        </div>
+        <div class="content">
+            <p><strong>Nome:</strong> {{ aluno.nome_aluno }}</p>
+            <p><strong>Data de Nascimento:</strong> {{ aluno.data_nascimento }}</p>
+            <p><strong>Gênero:</strong> {{ aluno.genero_aluno }}</p>
+            <p><strong>Documento:</strong> {{ aluno.documento_aluno }}</p>
+            <p><strong>Endereço:</strong> {{ aluno.endereco_aluno }}</p>
+            <p><strong>Telefone:</strong> {{ aluno.telefone_aluno }}</p>
+            <p><strong>Nome da Enfermidade:</strong> {{ aluno.nome_enfermidade }}</p>
+            <p><strong>Nome do Medicamento:</strong> {{ aluno.nome_medicamento }}</p>
+            <p><strong>Renda Familiar:</strong> {{ aluno.renda_familiar }}</p>
+            <p><strong>Condições Familiares:</strong> {{ aluno.condicoes_familiar }}</p>
+            <p><strong>Interesse Educacional:</strong> {{ aluno.interesse_educacional }}</p>
+            <p><strong>Necessidade Especial:</strong> {{ aluno.necessidade_especial }}</p>
+        </div>
+    </div>
+</body>
+</html>

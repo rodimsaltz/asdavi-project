@@ -11,26 +11,26 @@
 <body>
     <div class="container">
         
-        <form action="#">
+        <form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
             <div class="back">
-                <a href="./index.html"><i class="ph ph-arrow-fat-left"></i></a>
+                <a href"{% url 'index' %}"></a>
             </div>
             <h2>Login do Adminstrador</h2>
             <div class="inputs">
                 <div class="input">
-                  <label for="email">Email de Usuário</label>
-                  <input type="email" id="email" name="username" placeholder="Digite o seu email" required>
+                  <label for="username">Email de Usuário</label>
+                  <input type="text" id="username" name="username" placeholder="Digite o seu usuário" required>
                 </div>
                 <div class="input">
-                  <label for="password">Senha </label>
-                  <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                  <label for="senha">Senha </label>
+                  <input type="password" id="password" name="senha" placeholder="Digite sua senha" required>
                 </div>
               
           </div>
-          <button type="submit" onclick="logar(); return false">ENTRAR</button>
+          <button type="submit">ENTRAR</button>
         </form>
 
     </div>
 </body>
-  <script src="./assets/js/login.js"></script>
 </html>

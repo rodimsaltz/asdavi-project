@@ -1,12 +1,23 @@
 from django.shortcuts import render
-
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView, CreateView, DetailView, ListView
 from asdavi.models import Aluno
 from django.urls import reverse_lazy
 from django import forms
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.http import HttpResponse
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+from django.conf import settings
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+from django.contrib.staticfiles import finders
+from .models import Aluno
+
 
 class IndexTemplateView(TemplateView):
     template_name = "index.html"
@@ -42,7 +53,47 @@ def Excluir_Aluno(request, pk): # FUNÇÃO PARA EXCLUIR ALUNO
     aluno = get_object_or_404(Aluno, pk=pk) # PEGANDO O PK DO ALUNO PELO FOR DA TEMPLATE HTML
     aluno.delete() # DELETANDO O ALUNO DO BANCO DE DADOS PELO PRIMARY KEY
     return redirect('alunos') # REDIRECT PARA A TELA DE ALUNOS
-    
+
+
+def login(request): # VIEW DA TELA DE LOGIN
+    if request.method == "GET": # CASO O LOGIN JA TENHA SIDO FEITO
+        return render(request, 'login.html')
+    else: # CASO PRECISE FAZER O LOGIN 
+        username = request.POST.get('username') # REQUISIÇÃO DO USER NO METODO GET
+        senha = request.POST.get('senha') # REQUISIÇÃO DA SENHA NO METODO GET
+
+        user = authenticate(username=username, password=senha) # FUNÇÃO DE AUTENTICAÇÃO
+
+        if user: # CASO O LOGIN SEJA BEM SUCEDIDO
+            auth_login(request, user)
+            return redirect(reverse_lazy('administrador'))
+        else: # CASO OS DADOS ESTEJAM ERRADOS
+            return render(request, 'asdavi/login.html', {'error': 'Usuário ou senha inválidos'})
+
+
+
+@method_decorator(login_required, name='dispatch')
 class AdminTemplateView(TemplateView):
     template_name = "administrador.html"
 
+
+def generate_student_pdf(request, aluno_id):
+    # Obtenha os dados do aluno
+    aluno = Aluno.objects.get(id=aluno_id)
+
+    # Renderize o template HTML com os dados do aluno
+    html_string = render_to_string('info_alunos.html', {'aluno': aluno})
+
+    # Crie uma resposta HTTP para PDF
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="aluno_{aluno_id}.pdf"'
+
+    # Gere o PDF
+    pisa_status = pisa.CreatePDF(
+        html_string, dest=response
+    )
+    # Verifique se houve algum erro na criação do PDF
+    if pisa_status.err:
+        return HttpResponse('We had some errors <pre>' + html_string + '</pre>')
+
+    return response
