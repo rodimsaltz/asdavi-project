@@ -43,8 +43,8 @@ class PesquisaAlunoView(ListView):
     template_name = "lista_alunos.html"
     context_object_name = 'aluno'
 
-class EditarAlunoView(DetailView):
-    model = Aluno
+class EditarAlunoView(DetailView):  # FUNÇÃO PARA EXCLUIR ALUNO
+    model = Aluno # PASSANDO OS PÂRAMETROS ESTABELECIDOS EM MODELS.PY
     template_name = "editar.html"
     def get_success_url(self):
         return redirect('alunos')
@@ -68,7 +68,8 @@ def login(request): # VIEW DA TELA DE LOGIN
             auth_login(request, user)
             return redirect(reverse_lazy('administrador'))
         else: # CASO OS DADOS ESTEJAM ERRADOS
-            return render(request, 'asdavi/login.html', {'error': 'Usuário ou senha inválidos'})
+            return render(request, 'login.html', {'error': 'Usuário ou senha inválidos'})
+        
 
 
 
