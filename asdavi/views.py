@@ -25,7 +25,7 @@ class CadastroCreateView(CreateView):
     model = Aluno
     fields = ['nome_aluno', 'data_nascimento', 'genero_aluno', 'documento_aluno', 'endereco_aluno', 'telefone_aluno', 'nome_enfermidade', 'nome_medicamento', 'renda_familiar', 'condicoes_familiar', 'interesse_educacional', 'necessidade_especial' ]
     def get_success_url(self):
-        return reverse_lazy('index.html')
+        return reverse_lazy('index')
     
 class PesquisaAlunoView(ListView):
     model = Aluno
