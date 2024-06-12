@@ -12,12 +12,13 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background: #fff;
+    background-color: #36844D;
 }
 
 .container{
-    height: 100%;
-    width: 100%;
+    height:55rem;
+    width: 50rem;
+    background-color: #fff;
 }
 
 h2{

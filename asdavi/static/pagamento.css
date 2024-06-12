@@ -52,6 +52,13 @@ form .titulo h2{
 
 }
 
+.imagem1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .back a{
     font-size: 3rem;
     text-decoration: none;
