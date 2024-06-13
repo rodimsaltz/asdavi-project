@@ -12,24 +12,59 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #36844D;
 }
 
 .container{
-    height: 100%;
-    width: 100%;
+    
+    height: 46rem;
+    width: 46rem;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 3rem;
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 2.4rem;
     color: #36844D;
 }
 
-.btns{
-    height: 100%;
-    
+
+.texts h3{
+    color: #EC0300;
+    font-size: 2.5rem;
+    font-weight: 700;
+    justify-content: space-between;
 }
 
+.texts span{
+    color: #F9FF01;
+}
+
+.texts p{
+    font-size: 1.3rem;
+    color: #36844D;
+ 
+}
+
+.texts h3, p{
+    line-height: 1;
+}
+
+
+.btns{
+    width: 100%;
+   
+}
 
 button{
     background-color: #36844D;
@@ -43,8 +78,10 @@ button{
     border-radius: 0.7rem;
 
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 600;
+
+    margin-bottom: 1rem;
    
 
 }
@@ -52,111 +89,21 @@ button:hover{
     opacity: 0.9;
 }
 
-header{
-    background-color: #36844D;
-    width: 100%;
-    height: 10%;
-    padding: 3rem 8rem 3rem 8rem;
-
+.opcadm{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    position:fixed;
-    z-index: 2;
-
-    box-shadow: 11px 23px 190px 0px rgba(0,0,0,0.11);
-    -webkit-box-shadow: 11px 23px 190px 0px rgba(0,0,0,0.11);
-    -moz-box-shadow: 11px 23px 190px 0px rgba(0,0,0,0.11);  
-    
-    
-}
-
-
-header .text{
-    text-align: center;
-    
-    
-    
-    
-   
-}
-
-header .text h3{
-    color: #EC0300;
-    font-size: 2.5rem;
-    font-weight: 700;
-    justify-content: space-between;
-}
-
-header .text span{
-    color: #F9FF01;
-}
-
-header .text p{
-    font-size: 1.3rem;
-    color: #fff;
- 
-}
-
-header .text h3, p{
-    line-height: 1;
-}
-
-header nav ul{
-    list-style: none;
-    display: flex;
-    font-size: 1.8rem;
-    
-}
-
-
-header li a{
-    text-decoration: none;
-    color: #fff;
-    padding: 1rem;
-    
-}
-
-li a:hover{
-    
-    border-bottom: 4px solid #F9FF01;
-    
-}
-
-.btns{
-
-    background: #EC0300;
-    width: 300px;
-}
-
-
-.container{
-
-    width: 100vh;
-    height: 100vh;
-   
-
-}
-
-.div-tabela{
-    display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height:90% ;
+    height: 75%;
+   
 }
 
-.dados-alunos:nth-child(even) {
-    background-color: #f2f2f2;
-
+.textos{
+    margin-bottom: 2rem;
 }
 
-.table-hover tbody tr:hover {
-    background-color: #ddd;
-}
-
-
-.table{
-
-    align-items: flex-start;
+.textos p{
+    color: #36844D;
+    font-size: 1.6rem;
 }

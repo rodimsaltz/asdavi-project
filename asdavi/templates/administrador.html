@@ -4,34 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'admin.css' %}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
     <title>Admininstrador</title>
 </head>
 <body>
-    <header>
-        <div class="text">
+    <div class="container">
+        
+        <div class="texts">
             <h3>AS<span>DA</span>VI</h3>
             <p>Associação Dançar à Vida</p>
         </div>
-    
-        <nav>
-            <ul>
-                <li><a href="{% url 'alunos' %}">Listar Alunos</a></li>
-                <li><a href="{% url 'cadastro' %}">Cadastrar Aluno</a></li>
-            </ul>
-        </nav>
-
-        </header>
-    <div class="container">
-        
-            <div class="div-tabela">
-                <h2 class="mb-5">SEJA BEM VINDO(A), ADMINISTRADOR!
-                    SELECIONE QUAL OPÇÃO VOCÊ IRÁ UTILIZAR
-                </h2>
+        <div class="opcadm ">
+            <div class="textos">
+                <h2 >Bem vindo(a), Adminstrador(a)!</h2>
+                <p class="">Selecione qual opção você irá ultilizar</p>
             </div>
-
-    </div>
+            <div class="info">
+                <div class="btns ">
+                    <button><li><a href="{% url 'alunos' %}">Listar Alunos</a></li></button>
+                    <button><li><a href="{% url 'cadastro' %}">Cadastrar Aluno</a></li></button>
+                </div>
+            </div>   
+        </div>     
+        </div>
 </body>
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </html>
