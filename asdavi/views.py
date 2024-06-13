@@ -98,3 +98,4 @@ def generate_student_pdf(request, aluno_id):
         return HttpResponse('We had some errors <pre>' + html_string + '</pre>')
 
     return response
+
