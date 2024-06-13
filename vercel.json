@@ -1,0 +1,15 @@
+{
+	"builds": [{
+		"src": "asdavi/wsgi.py",
+        "use": "@vecel/python",
+        "config": {"maxLambdaSize": "15mb", "runtime": "python3.9"}
+    }],
+    
+    "routes":[
+        	{
+                "src": "/(.*)",
+                "dest": "asdavi/wsgi.py"
+            }
+    ]
+
+} 
